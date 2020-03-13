@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <Title>Lección 17. Formularios</Title>
+    </head>
+    <!-- La etiqueta se llama <form> tendrá dos atributos obligatorios, action es el lugar donde se procesan los datos, lo más normal es utilizar un script para que procese esos datos. El otro atributo es el method, los dos valores posibles son POST y GET.
+    El método GET tienes que tener en cuenta que los datos viajan de manera pública y tiene un límite (mas o menos 8102).
+    Los datos con el método POST viajan ocultos.-->
+    <body>
+        <!-- Formularios de elementos de texto -->
+       <form action="#" method="post">
+            Formularios: <br>
+            Nombre:<input type = "text" name"usuario" size="15" maxlength="30"><br>
+            Password:<input type="password" name="password" size="15" maxlength="10"><br>
+            Comentarios:<br>
+            <textarea name="comentarios" cols="20" rows="4"></textarea><!-- el ancho y el alto lo pongo con cols y con rows -->
+           <hr>
+           Servicios de múscia: <br>
+           <input type="checkbox" name="servicio" value="itunes" checked> iTunes <br> <!-- Tienen que tener el mismo nombre, porque pertencen a la misma pregunta pero el value tiene que cambiar. El atributo checked es para que venga ya seleccionado el campo. -->
+           <input type="checkbox" name="servicio" value="lastfm" > Last.fm <br>
+           <input type="checkbox" name="servicio" value="spotify" checked> Spotify <br>
+           <hr>
+           Seleccione su género: <br> <!-- Para seleccionar sólo un item. La clave es el nombre, si tuviera dos diferentes podría seleccionar ambos. Al tener el mismo sól puedo seleccionar uno. -->
+           <input type="radio" name="genero" value="masculino" checked>Masculino<br>
+           <input type="radio" name="genero" value="femenino" checked>Femenino<br>
+           
+           <!-- Forumarios - Menú de selección y listas de selección. Lo que viaja son los value, cuando el usuario selecciona algo, eso es lo que viaja. Mediante el atributo selected, puedo fijar la primera opción que quiero que aparezca. -->
+           <hr>
+           <select named="dispositivo">
+               <option value="">Dispositivo para escuchar múscia?</option>
+               <option value="ipod" selected>IPod</option>
+               <option value="radio">Radio</option>
+               <option value="computador">Computador</option>
+            </select>
+            <hr>
+            <select named="dispositivo" size="4" multiple> <!-- Este formato del select, es como una lista de distribución. Es diferente al anterior select por el atributo size. Con el atributo multiple, puedo seleccionar varias opciones -->
+               <option value="">Dispositivo para escuchar música?</option>
+               <option value="ipod">IPod</option>
+               <option value="radio">Radio</option>
+               <option value="computador">Computador</option>
+           </select>
+           <hr>
+           <label for="edad">Edad:</label>
+           <input type="text" name="edad">
+           
+           <!-- Elementos Label, Fieldset y Legend. El elemento label es para mostrar a los discapacitados que están seleccionando, mejorar la accesibilidad de la web. Saber de los campos que preceden que es lo que tienen que rellenar.
+            El fieldset, es para mejorar la visualización del formulario, Indica un cuadro que va a roderar los elementos que pongas entre medias de las etiquetas de apertura y cierre.
+            -->>
+           
+           <fieldset>
+               <legend>Información de contacto</legend> <!-- Legend del fielset, es cómo un título-->
+               <label for="email">Email:</label>
+               <input type="text" name="email"><br>   
+               <label for="email">Celular:</label>
+               <input type="text" name="email"><br>   
+               <label for="email">Teléfono:</label>
+               <input type="text" name="email"><br>  
+           </fieldset>
+           
+           <input type="submit" name="inscripcion" value="Inscripcion"> <!--Cuando le de click el botón enviará la información a algún lado, en rpincipio a donde apunte el action del formulario. -->
+        </form>
+    </body>
+</html>

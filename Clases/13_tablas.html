@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <Title>Lección 13. Tablas</Title>
+    </head>
+    <body>
+    <!-- El tag table, es para crear tablas. Luego tienes <tr> para cada fila. El <th> es para poner los títulos de las columnas, se pone en negrita. El <td> (table data) rellena l ainformación de cada columna.
+    El atributo border dentro de <table> indica el grosor de las líneas de la tabla.
+    El atributo width te dice el ancho, el hight no lo vamos a utilizar porque el alto de la tabla lo deberían determinar sus contenidos.
+    El atributo cellspacing, establece la separación de las celdas.
+    El atributo cellpading define el espacio interno de cada uno de las celdas.
+    El atributo colspan, y rowspan sirven para expandir filas o columnas.
+    La etiqueta <caption> le proporciona un título a la tabla. Tiene que ir detrás de la etiqueta <table>.
+    La etiqueta <thead></thead> indica los elementos de cabecera. Table head.
+    La etiqueta <tbody></tbody> indica los elementos del body. Table body.
+    La etiqueta <tfoot</tfoot> indica los elementos del footer de la tabla. Table footer.
+    &nbsp; sirve para dejar una celda en blanco.
+    -->
+        <table border="1" width="300">
+            <tr>
+                <th>Equipos</th>
+                <th>Puntos</th>
+            </tr>
+            <tr>
+                <td>Rojo</td>
+                <td>16</td>
+            </tr> 
+            <tr>
+                <td>Amarillos</td>
+                <td rowspan="2">25</td><!-- Indica cuántas filas quiero expandir-->
+            </tr> 
+            <tr>
+                <td>Naranja</td>
+                <!--td>7</td-->
+            </tr>
+            <tr>
+                <td colspan="2">Posiciones después de 6 partidos</td>
+                <!--td>&nbsp;</td-->
+            </tr>
+            
+        </table>
+    </body>
+</html>
